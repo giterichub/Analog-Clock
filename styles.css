@@ -1,0 +1,101 @@
+*{
+  box-sizing: border-box;
+
+}
+body{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  overflow: hidden;
+  background-color: #CCD3CF;
+}
+.Clock{
+  background-color: #2C2929;
+  position: relative;
+  border-radius: 50%;
+  height: 35.028vw;
+  width: 35.028vw;
+  box-shadow: 0 3em 5.8em;
+}
+.Clock::after{
+  content: '';
+  background-color: #7D7C7B;
+  border-radius: 50%;
+  position: absolute;
+  z-index: 11;
+  width: 15px;
+  height: 15px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.Clock .number{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transform: rotate(var(--rotation));
+  font-size: 1.8rem;
+  color: #8D8C8C;
+  padding: 4px;
+  font-family: sans-serif;
+  font-weight: lighter;
+}
+.number1{--rotation: 30deg;}
+.numrot1{transform: rotate(-30deg);}
+.number2{--rotation: 60deg;}
+.numrot2{transform: rotate(-60deg);}
+.number3{--rotation: 90deg;}
+.numrot3{transform: rotate(-90deg);}
+.number4{--rotation: 120deg;}
+.numrot4{transform: rotate(-120deg);}
+.number5{--rotation: 150deg;}
+.numrot5{transform: rotate(-150deg);}
+.number6{--rotation: 180deg;}
+.numrot6{transform: rotate(-180deg);}
+.number7{--rotation: 210deg;}
+.numrot7{transform: rotate(-210deg);}
+.number8{--rotation: 240deg;}
+.numrot8{transform: rotate(-240deg);}
+.number9{--rotation: 270deg;}
+.numrot9{transform: rotate(-270deg);}
+.number10{--rotation: 300deg;}
+.numrot10{transform: rotate(-300deg);}
+.number11{--rotation: 330deg;}
+.numrot11{transform: rotate(-330deg);}
+
+.Clock .hand{
+  --rotation: 0;
+  position: absolute;
+  bottom: 50%;
+  left: 50%;
+  background-color: black;
+  transform: translateX(-50%) rotate(calc(var(--rotation) * 1deg));
+  transform-origin: bottom;
+  z-index: 10;
+}
+.Clock .second{
+  height: 40%;
+  width: 2px;
+  background-color: #40cb83;
+}
+.Clock .hour{
+  height: 30%;
+  width: 5px;
+  background-color: #EBF0ED;
+}
+.Clock .minute{
+  height: 14vw;
+  width: 4px;
+  background-color: #EBF0ED;
+}
+.name{
+  font-family: "Sacramento";
+  position: absolute;
+  top: 55%;
+  left: 42%;
+  color: #616361;
+  font-weight: bold;
+  font-size: 1.3rem;
+}
